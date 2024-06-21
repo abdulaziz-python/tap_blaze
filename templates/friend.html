@@ -1,15 +1,21 @@
-{% extends 'main.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$BLAZE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$BLAZE Friends</title>
+     <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-{% block content %}
-
-<h1>FRIENDS</h1>
-
-{% endblock content %}
+    <div class="friends-container">
+        <h1 class="friends-title">👥 Friends</h1>
+        <button class="invite-button">Invite a Friend</button>
+        <p class="reward-text">5 000 000 $BLZ per invited friend</p>
+        <div class="invited-friends-box">
+            <p class="no-friends">You have no Friends 😢</p>
+        </div>
+    </div>
+    <script src="static/js/script.js"></script>
 </body>
 </html>
