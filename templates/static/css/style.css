@@ -594,3 +594,126 @@ body {
         background: #555;
     }
 }
+
+
+
+/* FRIENDS */
+
+.friends-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+    animation: backgroundAnimation 10s infinite;
+}
+
+.friends-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ff9800;
+}
+
+.invite-button {
+    background-color: #ff9800;
+    color: #1c1c1c;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 40px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-bottom: 10px;
+    box-shadow: 0 4px #ffa726;
+}
+
+.invite-button:hover {
+    background-color: #1c1c1c;
+    color: white;
+    transform: scale(1.05);
+}
+
+.reward-text {
+    font-size: 1em;
+    opacity: 0.6;
+    margin-bottom: 20px;
+    color: #ffa726;
+}
+
+.invited-friends-box {
+    background-color: #1c1c1c;
+    border: 2px solid #ffa726;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 20px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.no-friends {
+    font-size: 1.2em;
+    opacity: 0.8;
+    color: #ff9800;
+}
+
+.friend-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ffa726;
+}
+
+.friend-item:last-child {
+    border-bottom: none;
+}
+
+.friend-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #ff9800;
+}
+
+.friend-name {
+    font-size: 1em;
+    color: #ffa726;
+}
+
+@media (max-width: 768px) {
+    .invite-button {
+        padding: 15px 30px;
+        font-size: 1em;
+    }
+
+    .reward-text {
+        font-size: 0.9em;
+    }
+
+    .invited-friends-box {
+        width: 90%;
+    }
+
+    .friend-name {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .invite-button {
+        padding: 10px 20px;
+        font-size: 0.8em;
+    }
+
+    .reward-text {
+        font-size: 0.8em;
+    }
+
+    .friend-name {
+        font-size: 0.8em;
+    }
+}
