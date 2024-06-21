@@ -1,0 +1,21 @@
+{
+  "name": "$BLAZE Clicker Game",
+  "short_name": "$BLAZE",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#1c1c1c",
+  "theme_color": "#ff9800",
+  "description": "An addictive and fun clicker game",
+  "icons": [
+    {
+      "src": "assets/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

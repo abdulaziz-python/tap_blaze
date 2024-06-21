@@ -1,0 +1,596 @@
+
+/* HOME*/
+body {
+    background: linear-gradient(45deg, #1c1c1c, #ff9800);
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    animation: backgroundAnimation 10s infinite;
+    text-shadow: 2px 2px #000;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.header {
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 2em;
+}
+
+#coin-count {
+    display: block;
+    font-size: 1.2em;
+}
+
+.click-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#icon {
+    height: 50vh;
+    cursor: pointer;
+    transition: transform 0.1s;
+    user-select: none;
+    image-rendering: pixelated;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #555;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ff9800;
+    transition: width 0.3s;
+}
+
+#progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1em;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #1c1c1c;
+    color: white;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #ff9800;
+    color: #1c1c1c;
+    transform: scale(1.1);
+}
+
+@keyframes floatUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #coin-count {
+        font-size: 1em;
+    }
+
+    #icon {
+        height: 40vh;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .progress-container {
+        margin: 10px 0;
+    }
+}
+
+/* TASKS */
+body {
+    background: linear-gradient(45deg, #1c1c1c, #ff9800);
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    animation: backgroundAnimation 10s infinite;
+    text-shadow: 2px 2px #000;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 2em;
+}
+
+.task-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.task-box {
+    background-color: #333;
+    border: 2px solid #ffa726;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+.task-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ffa726;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+}
+
+.task:last-child {
+    border-bottom: none;
+}
+
+.task img {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.task-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.task-name {
+    font-size: 18px;
+    margin: 0;
+}
+
+.task-prize {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.task-button {
+    font-size: 28px;
+    color: #ffa726;
+    margin-left: auto;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.task-button:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .task-box {
+        width: 100%;
+        max-width: none;
+    }
+
+    .task img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .task-name {
+        font-size: 16px;
+    }
+
+    .task-prize {
+        font-size: 12px;
+    }
+
+    .task-button {
+        font-size: 24px;
+    }
+
+    .task {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 15px;
+    }
+
+    .task-details {
+        align-items: flex-start;
+    }
+}
+
+/* BOOST */
+
+/* Reset styles for all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: 'Press Start 2P', cursive; /* Use 'Press Start 2P' for the entire page */
+    background: linear-gradient(45deg, #1c1c1c, #ff9800);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Container styles */
+.boost-container {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #1c1c1c, #ff9800);
+    color: white;
+    font-family: 'Press Start 2P', cursive; /* Use 'Press Start 2P' */
+    overflow: hidden;
+    animation: backgroundAnimation 10s infinite;
+    text-shadow: 2px 2px #000;
+    padding: 20px;
+}
+
+/* Keyframe animation */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Title styles */
+.boost-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Boost box styles */
+.boost-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 22px;
+    padding: 20px;
+    border: 3px solid #ffa726;
+    border-radius: 15px;
+    width: 70%;
+    max-width: 1300px;
+    margin-top: 20px;
+    /* Enable scrolling on small screens */
+    overflow-y: auto;
+    /* Define scrollbar styles */
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+    font-size: 0.8em; /* Adjust font size */
+}
+
+
+/* Individual boost item styles */
+.boost-item {
+    background-color: #333;
+    border: 2px solid #ffa726;
+    padding: 20px;
+    font-family: 'Press Start 2P', cursive;
+    height: 160px;
+    width: 400px;
+    box-sizing: border-box;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Hover effect on boost item */
+.boost-item:hover {
+    transform: scale(1.05);
+}
+
+/* Boost content styles */
+.boost-content {
+    display: flex;
+    font-family: 'Press Start 2P', cursive;
+    align-items: center;
+}
+
+/* Boost icon styles */
+.boost-icon {
+    font-size: 60px;
+    margin-right: 15px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Boost details styles */
+.boost-details {
+    flex: 1;
+    display: flex;
+    font-family: 'Press Start 2P', cursive;
+    flex-direction: column;
+}
+
+/* Boost details header styles */
+.boost-details h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Press Start 2P', cursive;
+    color: #ffa726;
+}
+
+/* Boost price styles */
+.boost-price {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: 'Press Start 2P', cursive;
+    opacity: 0.8;
+}
+
+/* Boost level styles */
+.boost-level {
+    font-size: 16px;
+    font-family: 'Press Start 2P', cursive;
+    opacity: 0.5;
+}
+
+/* Get boost button styles */
+.get-boost-btn {
+    background-color: #ff9800;
+    color: #1c1c1c;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Press Start 2P', cursive;
+    padding: 5px 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px;
+}
+
+/* Hover effect on get boost button */
+.get-boost-btn:hover {
+    background-color: #1c1c1c;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    transform: scale(1.1);
+}
+
+/* Recharge speed section styles */
+.recharge-speed {
+    margin-top: 40px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Recharge speed header styles */
+.recharge-speed h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Speed description styles */
+.speed-description {
+    font-size: 1.2em;
+    opacity: 0.8;
+    margin-bottom: 20px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Boost button styles */
+.boost-button {
+    background-color: #1c1c1c;
+    color: white;
+    border: 2px solid #ff9800;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+/* Hover effect on boost button */
+.boost-button:hover {
+    background-color: #ff9800;
+    color: #1c1c1c;
+    transform: scale(1.1);
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Alert styles */
+.alert {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 5px;
+    font-size: 1.2em;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show alert */
+.alert.show {
+    opacity: 1;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .boost-box {
+        width: 90%;
+    }
+
+    .boost-item {
+        width: calc(50% - 10px);
+        max-width: none;
+    }
+
+    .boost-details h3 {
+        font-size: 20px;
+    }
+
+    .boost-price {
+        font-size: 16px;
+    }
+
+    .boost-level {
+        font-size: 14px;
+    }
+
+    .get-boost-btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .recharge-speed h2 {
+        font-size: 1.8em;
+    }
+
+    .speed-description {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .boost-item {
+        width: 100%;
+        max-width: none;
+    }
+
+    .boost-details h3 {
+        font-size: 18px;
+    }
+
+    .boost-price {
+        font-size: 14px;
+    }
+
+    .boost-level {
+        font-size: 12px;
+    }
+
+    .get-boost-btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .recharge-speed h2 {
+        font-size: 1.6em;
+    }
+
+    .speed-description {
+        font-size: 0.9em;
+    }
+}
+
+/* Custom scrollbar styles for WebKit browsers */
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
